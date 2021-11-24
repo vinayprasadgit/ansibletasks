@@ -1,0 +1,10 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+    - name: copy  war on to tomcat server
+      copy:
+        src: /var/lib/jenkins/workspace/deploy_ansible_job/target/AutoDeploy.war
+        dest: /opt/tomcat/webapp/
+...
+
