@@ -1,0 +1,8 @@
+---
+- name: Sample Playbook
+  hosts: all
+  become: yes
+  tasks:
+  - name: Starting Tomcat
+    shell: nohup /usr/local/latest/bin/startup.sh &
+

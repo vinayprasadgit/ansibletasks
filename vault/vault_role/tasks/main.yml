@@ -1,0 +1,5 @@
+---
+- name: Clone a repo
+  git:
+    repo: https://vinayprasadgit:{{ password }}@github.com/vinayprasadgit/vaultrepo.git
+    dest: /home/ec2-user/ansible/vault/test-vault

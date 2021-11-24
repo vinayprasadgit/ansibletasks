@@ -1,0 +1,20 @@
+---
+- name: Download Tomcat
+  get_url:
+    url: "{{ tomcat_url }}"
+    dest: /usr/local/
+    mode: 700
+
+- name: Extract Tomcat
+  unarchive:
+    src: "{{ unarchive_src }}"
+    dest: /usr/local/
+
+- name: Replacing default port with required port
+  template:
+    src: server.xml.j2
+    dest: /usr/local/tomcat/conf/server.xml
+- name: start tomcat
+  shell: nohup /usr/local/tomcat/bin/startup.sh &
+  
+

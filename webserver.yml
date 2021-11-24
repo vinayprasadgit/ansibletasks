@@ -1,0 +1,5 @@
+---
+- name: Web Server Deploy
+  hosts: all
+  roles:
+  - tomcat

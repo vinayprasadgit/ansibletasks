@@ -1,0 +1,12 @@
+---
+- name: Install the latest version of Apache
+  yum:
+    name: httpd
+    state: latest
+- name: copy Index.html file
+  copy: 
+    src: index.html
+    dest: /var/www/html/
+  notify:
+    - restartweb
+

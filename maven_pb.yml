@@ -1,0 +1,5 @@
+---
+- name: Maven Installtion Playbook
+  hosts: all
+  roles:
+  - maven_role

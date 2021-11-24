@@ -1,0 +1,9 @@
+---
+- name: Add Group
+  group:
+    name: tomcatgrp
+
+- name: Add User
+  user:
+    name: tomcat
+    group: tomcatgrp

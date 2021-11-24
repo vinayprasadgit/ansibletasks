@@ -1,0 +1,16 @@
+---
+- name: Download Maven
+  get_url:
+    url: https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
+    dest: /opt/
+- name: Extract Maven 
+  unarchive:
+    src: /opt/apache-maven-3.8.3-bin.tar.gz
+    dest: /opt/
+    remote_src: yes
+- name: Set Path
+  lineinfile:
+    dest: ~/.bashrc
+    line: "export PATH=/opt/apache-maven-3.8.3/bin:$PATH"
+- name: Source Bashrc
+  action: shell source ~/.bashrc

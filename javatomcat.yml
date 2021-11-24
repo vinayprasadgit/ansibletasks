@@ -1,0 +1,6 @@
+---
+- name: Installation of java and tomcat
+  hosts: all
+  roles:
+    - tomcat_role
+    

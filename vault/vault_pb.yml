@@ -1,0 +1,5 @@
+---
+- name: Ansible playbook to test ansible vault
+  hosts: localhost
+  roles:
+    - vault_role

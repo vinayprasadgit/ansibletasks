@@ -1,0 +1,4 @@
+---
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.72/bin/apache-tomcat-8.5.72.tar.gz
+unarchive_src: /usr/local/apache-tomcat-8.5.72.tar.gz 
+tomcat_port: 8090

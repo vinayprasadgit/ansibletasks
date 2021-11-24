@@ -1,0 +1,16 @@
+---
+- name: Install Java
+  yum:
+    name: java-1.8.0-openjdk
+    state: present
+
+- name: Set Java HOME
+  lineinfile: dest=~/.bash_profile regexp='^JAVA_HOME'>
+                 line={{javahome}}
+
+- name: Set JAVA PATH
+  lineinfile: dest=~/.bash_profile regexp='^JAVA_HOME'>
+                 line={{javapath}}
+
+- name: Source Bashrc
+  action: shell source ~/.bash_profile

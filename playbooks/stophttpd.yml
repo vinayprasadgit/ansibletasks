@@ -1,0 +1,10 @@
+---
+- name: stop httpd
+  hosts: all
+  become_user: root
+  tasks:
+  - name: Stop service httpd, if started
+    service:
+      name: httpd
+      state: stopped
+...

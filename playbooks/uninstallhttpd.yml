@@ -1,0 +1,11 @@
+
+--- 
+- hosts: all
+  become: true
+  tasks:
+     
+    - name: Uninstall HTTPD
+      yum:
+        name: httpd
+        autoremove: yes
+        state: absent

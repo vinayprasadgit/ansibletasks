@@ -1,0 +1,4 @@
+[nodes]
+host1 ansible_host=172.31.23.11 ansible_connection=ssh ansible_user=root 
+host2 ansible_host=172.31.17.17 ansible_connection=ssh ansible_user=root
+
